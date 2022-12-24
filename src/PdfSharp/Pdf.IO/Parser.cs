@@ -1382,7 +1382,7 @@ namespace PdfSharp.Pdf.IO
                                 if (generation == generationChecked && id == idChecked + 1)
                                     idToUse = idChecked;
                                 else
-                                    ParserDiagnostics.ThrowParserException("Invalid entry in XRef table, ID=" + id + ", Generation=" + generation + ", Position=" + position + ", ID of referenced object=" + idChecked + ", Generation of referenced object=" + generationChecked);  // TODO L10N using PSSR.
+                                    continue;// Igore errors. ParserDiagnostics.ThrowParserException("Invalid entry in XRef table, ID=" + id + ", Generation=" + generation + ", Position=" + position + ", ID of referenced object=" + idChecked + ", Generation of referenced object=" + generationChecked);  // TODO L10N using PSSR.
                             }
                             //!!!new 2018-03-14 end
 #endif
